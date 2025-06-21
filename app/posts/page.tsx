@@ -1,7 +1,7 @@
 import prisma from "@/lib/prisma";
 import Link from "next/link";
 
-export default async function Page({ searchParams }: { searchParams: { [key: string]: string | string[] | undefined } }) {
+export default async function Page({ searchParams }: { searchParams: any }) {
   let pageParam = searchParams.page;
   let pageStr: string;
   if (Array.isArray(pageParam)) {
